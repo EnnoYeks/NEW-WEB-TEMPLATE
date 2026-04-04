@@ -111,11 +111,32 @@ footer{
 <div class="section">   
 <h2 style="color:red;">About This Site</h2>
 <p style="color:green;">You can change this section to show information about your school work, coding projects, or anything you want to share.</p>
-</div>
-
+</div> 
+  <!-- your content here -->
 <footer>
 <p>© 2026 Enno Yeks</p>
 </footer>
+  <script>
+const images = [
+  "mountain.png",
+  "citypic.jpg",
+  "nicefood.jpg"
+];
 
+let index = 0;
+
+function changeBackground() {
+  document.querySelector(".container").style.backgroundImage =
+    `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(${images[index]})`;
+
+  index = (index + 1) % images.length;
+}
+
+// change every 5 seconds
+setInterval(changeBackground, 5000);
+
+// run once at start
+changeBackground();
+</script>
 </body>
 </html>
