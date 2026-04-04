@@ -130,7 +130,7 @@ let index = 0;
 
 function changeBackground() {
   document.querySelector(".container").style.backgroundImage =
-    `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url(${images[index]})`;
+    `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(${images[index]})`;
 
   index = (index + 1) % images.length;
 }
