@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <title>About Page</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
-Heeeelooooo....
+<div class="container">
+
+  <nav>
+    <h1>EnnoYeks</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h2>About Page</h2>
+    <p>Heeeelooooo....</p>
+  </div>
+
+</div>
+
+<script>
+const images = [
+  "mountain.png",
+  "citypic.jpg",
+  "nicefood.jpg"
+];
+
+let index = 0;
+
+function changeBackground() {
+  const container = document.querySelector(".container");
+  if (!container) return;
+
+  container.style.backgroundImage =
+    `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url('${images[index]}')`;
+
+  index = (index + 1) % images.length;
+}
+
+setInterval(changeBackground, 3000);
+changeBackground();
+</script>
 
 </body>
 </html>
