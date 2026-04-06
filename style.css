@@ -124,3 +124,14 @@ footer{
   gap: 15px;
   margin-bottom: 20px;
 }
+/* Make skeleton visible on dark backgrounds */
+.skeleton {
+  background: #333 !important;           /* darker gray for dark mode */
+}
+
+.skeleton::after {
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255,255,255,0.15), 
+    transparent);
+}
